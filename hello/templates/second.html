@@ -13,20 +13,25 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <title>Display Webcam Stream</title>
    </head>
-    
+   
         <body>
-
+                <div class="page-header">
+                    <h1>Live Streaming Show <small>Object detect</small></h1>
+                </div>
             <div id="container">
                 <form  method = "POST">
                     {% csrf_token %}
-                        <t><t><h1> Live Streaming Show</h1>
-                        <br>
                         <style>
                             img { display: block; margin: 0px auto; }
                         </style>
                         <img src = "{% url 'second_video_feed' %}" width="640" height="480"></img>
                 </form>   
-                <a href = "home" >Home</a>             
+                <br>
+                <div class ="row">
+                    <div class ="col-md-6">
+                        <a href = "/" >First Video</a>               
+                    </div>
+                </div>
             </div>
 
         </body>

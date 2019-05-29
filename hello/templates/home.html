@@ -13,12 +13,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
         <title>Display Webcam Stream</title>
    </head>
-    
         <body>
-            <div class ="row">
-                <div class ="col-md-6"> 
-                    <h1> Live Streaming Show</h1>
-                </div>
+            <div class="page-header">
+                <h1>Live Streaming Show <small>Edge detect</small></h1>
+            </div>
+            
             </div>
             <div id="container">
                 <form  method = "POST">
@@ -27,17 +26,16 @@
                         <style>
                             img { display: block; margin: 0px auto; }
                         </style>
-                        <div class ="row">
-                            <div class ="col-md-6">
+                        
+                            
                                 <img src = "{% url 'video_feed' %}" width="640" height="480"></img>
-                            </div>
-                        <br>
-                            <div class ="col-md-6">
-                                <img src = "{% url 'second_video_feed' %}" width="640" height="480"></img>
-                            </div>
-                        </div>
+                        
                 </form>
-                <a href = "second/" >Second Video</a>               
+                <div class ="row">
+                    <div class ="col-md-6">
+                        <a href = "second/" >Second Video</a>               
+                    </div>
+                </div>
             </div>
         </body>
 </html>
